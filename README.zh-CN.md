@@ -2,19 +2,19 @@
 
 [English](README.md) | [中文](README.zh-CN.md)
 
-一个功能强大的文件预览组件库，支持PDF和Office文档（DOCX、PPTX、XLSX、XLS）的预览，具有现代化的Web界面。
+一个功能强大的文件预览组件库，支持 PDF 和 Office 文档（DOCX、PPTX、XLSX、XLS）的预览，具有现代化的 Web 界面。
 
 ## 功能特性
 
-- 📄 **PDF预览**: 完整的PDF文档渲染，支持缩放和导航
-- 📊 **Office文档**: 支持Microsoft Office格式
-  - Word文档 (DOCX)
-  - PowerPoint演示文稿 (PPTX)
-  - Excel电子表格 (XLSX, XLS)
-- 🎨 **现代化UI**: 简洁响应式设计，包含加载状态
+- 📄 **PDF 预览**: 完整的 PDF 文档渲染，支持缩放和导航
+- 📊 **Office 文档**: 支持 Microsoft Office 格式
+  - Word 文档 (DOCX)
+  - PowerPoint 演示文稿 (PPTX)
+  - Excel 电子表格 (XLSX, XLS)
+- 🎨 **现代化 UI**: 简洁响应式设计，包含加载状态
 - 🔧 **可定制**: 支持不同使用场景的配置选项
 - 🚀 **轻量级**: 优化的包大小，提供更好的性能
-- 🛡️ **TypeScript**: 完整的TypeScript支持和类型定义
+- 🛡️ **TypeScript**: 完整的 TypeScript 支持和类型定义
 
 ## 安装
 
@@ -64,20 +64,20 @@ yarn add @ranui/preview
 import { preview } from '@ranui/preview';
 
 // 组件会自动注册为自定义元素
-// 现在可以在HTML中使用 <r-preview>
+// 现在可以在 HTML 中使用 <r-preview>
 ```
 
 ## API 参考
 
-### 自定义元素: `<r-preview>`
+### 自定义元素：`<r-preview>`
 
 #### 属性
 
 | 属性 | 类型 | 默认值 | 描述 |
 |------|------|--------|------|
-| `src` | string | - | 要预览的文件URL或blob URL |
+| `src` | string | - | 要预览的文件 URL 或 blob URL |
 | `closeable` | boolean | false | 是否显示关闭按钮 |
-| `baseUrl` | string | 'https://ranuts.github.io/document' | Office文档渲染的基础URL |
+| `baseUrl` | string | 'https://ranuts.github.io/document' | Office 文档渲染的基础 URL |
 | `label` | string | - | 预览的自定义标签 |
 
 #### 方法
@@ -135,7 +135,7 @@ pnpm test
 - `pnpm dev` - 启动开发服务器，支持热重载
 - `pnpm build` - 构建生产版本
 - `pnpm test` - 运行测试套件
-- `pnpm test:ui` - 使用UI运行测试
+- `pnpm test:ui` - 使用 UI 运行测试
 - `pnpm test:report` - 显示测试报告
 
 ## 浏览器支持
@@ -159,9 +159,9 @@ AGPL-3.0 许可证 - 详情请查看 [LICENSE](LICENSE) 文件。
 
 ## 相关项目
 
-- [ranui](https://github.com/ranuts/ranui) - 现代化UI组件库
+- [ranui](https://github.com/ranuts/ranui) - 现代化 UI 组件库
 - [ranuts](https://github.com/ranuts/ranuts) - 工具库
 
 ## 支持
 
-如果你遇到任何问题或有疑问，请在GitHub上[提交issue](https://github.com/ranuts/fileview/issues)。 
+如果你遇到任何问题或有疑问，请在 GitHub 上[提交 issue](https://github.com/ranuts/fileview/issues)。 

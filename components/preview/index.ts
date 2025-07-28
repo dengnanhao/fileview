@@ -287,6 +287,9 @@ async function Custom() {
         this.previewIframe.setAttribute('src', this.baseUrl);
         this.previewIframe.setAttribute('style', 'display: none;');
         this.previewIframe.style.setProperty('margin-bottom', '30px');
+        // 添加权限策略设置，避免权限策略违规警告
+        this.previewIframe.setAttribute('allow', 'autoplay; camera; fullscreen; microphone; clipboard-write; display-capture; geolocation');
+        this.previewIframe.setAttribute('sandbox', 'allow-scripts allow-same-origin allow-forms allow-popups allow-modals');
         this.previewContext.appendChild(this.previewIframe);
         previewContain.appendChild(this.previewContext);
         this.preview.appendChild(previewOption);
