@@ -1,26 +1,32 @@
 @import url('../../base.less');
 
 .r-preview {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
   &-slot {
     display: block;
   }
 }
 :host {
   cursor: pointer;
+  display: block;
+  position: relative;
 }
 
 .r-preview-mask {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   background-color: rgba(0, 0, 0, 0.45);
-  z-index: 1081;
+  z-index: 1;
   .r-preview-loading {
     position: absolute;
-    top: 30vh;
-    left: 50vw;
+    top: 30%;
+    left: 50%;
     transform: translateX(-50%);
     display: flex;
     flex-flow: column;
@@ -47,15 +53,15 @@
     }
   }
   .r-preview-contain {
-    max-width: calc(100vw - 20px);
     margin: 0 auto;
     display: flex;
     flex-flow: column nowrap;
     align-items: center;
     justify-content: center;
+    height: 100%;
     .r-preview-context {
       margin: 0 auto;
-      height: calc(100vh - 68px);
+      height:100%;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;
@@ -64,8 +70,7 @@
     }
     .r-preview-context-pdf {
       width: 100%;
-      margin: 34px auto;
-      height: 100vh;
+      height: 100%;
       display: flex;
       flex-flow: column nowrap;
       justify-content: flex-start;

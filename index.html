@@ -1,35 +1,51 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      http-equiv="Permissions-Policy"
+      content="autoplay=*, camera=*, fullscreen=*, microphone=*, clipboard-write=*, display-capture=*, geolocation=*"
+    />
+    <title>Document</title>
+    <script type="module" src="./index.ts"></script>
+    <style>
+      .preview-wrapper {
+        width: 50%;
+        height: 600px;
+        position: relative;
+      }
+      #preview {
+        height: 100%;
+      }
+    </style>
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="Permissions-Policy" content="autoplay=*, camera=*, fullscreen=*, microphone=*, clipboard-write=*, display-capture=*, geolocation=*">
-  <title>Document</title>
-  <script type="module" src="./index.ts"></script>
-</head>
+  <body>
+    <div class="preview-wrapper">
+      <r-preview id="preview" closeable="false"></r-preview>
+    </div>
 
-<body>
-  <r-preview id="preview"></r-preview>
-  <r-button type="primary" style="cursor: pointer;" onclick="uploadFile()">Choose File to Preview</r-button>
-  <script>
-    const uploadFile = () => {
-      const preview = document.getElementById('preview');
-      const input = document.createElement('input');
-      input.setAttribute('type', 'file');
-      input.setAttribute('accept', '.docx,.pptx,.pdf,.xlsx');
-      input.click();
+    <r-button type="primary" style="cursor: pointer" onclick="uploadFile()"
+      >Choose File to Preview</r-button
+    >
+    <script>
+      const uploadFile = () => {
+        const preview = document.getElementById("preview");
+        const input = document.createElement("input");
+        input.setAttribute("type", "file");
+        input.setAttribute("accept", ".docx,.pptx,.pdf,.xlsx");
+        input.click();
 
-      input.onchange = (e) => {
-        const { files = [] } = input;
-        if (files.length > 0) {
-          const file = files[0];
-          const url = URL.createObjectURL(file);
-          preview.setAttribute('src', url);
-        }
+        input.onchange = (e) => {
+          const { files = [] } = input;
+          if (files.length > 0) {
+            const file = files[0];
+            const url = URL.createObjectURL(file);
+            preview.setAttribute("src", url);
+          }
+        };
       };
-    };
-  </script>
-</body>
-
+    </script>
+  </body>
 </html>
