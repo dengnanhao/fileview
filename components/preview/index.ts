@@ -262,6 +262,7 @@ async function Custom() {
       showPreview = () => {
         if (this.src) {
           if (this.preview) {
+            if (this.preview.style.display !== "none") return;
             this.preview.style.display = "block";
             this.preview.appendChild(this._loadingElement!);
             if (
@@ -287,6 +288,7 @@ async function Custom() {
         this.preview = document.createElement("div");
         this.preview.setAttribute("class", "r-preview-mask");
         this.preview.setAttribute("id", "r-preview-mask");
+        this.preview.addEventListener("click", (e) => e.stopPropagation());
         const previewOption = document.createElement("div");
         previewOption.setAttribute("class", "r-preview-options");
         if (this.closeable !== "false") {
